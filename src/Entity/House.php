@@ -31,6 +31,11 @@ class House
      */
     private $maxGuests;
 
+    /**
+     * @ORM\OneToMany(targetEntity="App\Entity\Booking", mappedBy="house")
+     */
+    private $bookings;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -70,5 +75,10 @@ class House
         $this->maxGuests = $maxGuests;
 
         return $this;
+    }
+
+    public function getBookings(): Collection
+    {
+        return $this->bookings;
     }
 }

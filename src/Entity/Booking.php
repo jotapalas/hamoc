@@ -36,6 +36,11 @@ class Booking
      */
     private $email;
 
+    /**
+     * @ORM\ManyToOne(targetEntity="App\Entity\House", inversedBy="bookings")
+     */
+    private $house;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -85,6 +90,18 @@ class Booking
     public function setEmail(string $email): self
     {
         $this->email = $email;
+
+        return $this;
+    }
+
+    public function getHouse(): House
+    {
+        return $this->house;
+    }
+
+    public function setHouse(House $house): self
+    {
+        $this->house = $house;
 
         return $this;
     }
