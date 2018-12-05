@@ -1,0 +1,18 @@
+{% extends "base.html.twig" %}
+{% block title %}
+    Casa de Don Alonso
+{% endblock %}
+
+{% block stylesheets %}
+{% endblock %}
+
+{% block body %}
+    {{ form_start(form, {attr: {class: 'booking-form-class'} }) }}
+        {{ form_widget(form) }}
+
+        <input type="submit" class="btn" value="Reserva" />
+    {{ form_end(form) }}
+{% endblock %}
+
+{% block javascripts %}
+{% endblock %}
