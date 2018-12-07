@@ -3,16 +3,32 @@
     Casa de Don Alonso
 {% endblock %}
 
-{% block stylesheets %}
+{% block styles %}
+    {{ parent() }}
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/css/bootstrap-datepicker.min.css"
+    />
+{% endblock %}
+
+{% block scripts %}
+    {{ parent() }}
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/js/bootstrap-datepicker.min.js"
+    >
+    </script>
+
+    <script>
+        $(document).ready(function() {
+            $('.js-datepicker').datepicker({
+                format: 'dd-mm-yyyy'
+            }).on('changeDate', function(e){
+                $(this).datepicker('hide');
+            });
+        });
+    </script>
 {% endblock %}
 
 {% block body %}
-    {{ form_start(form, {attr: {class: 'booking-form-class'} }) }}
-        {{ form_widget(form) }}
-
-        <input type="submit" class="btn" value="Reserva" />
-    {{ form_end(form) }}
-{% endblock %}
-
-{% block javascripts %}
+    {% include 'forms/booking-form.html.twig' with {'form': form} %}
 {% endblock %}

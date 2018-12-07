@@ -1,0 +1,22 @@
+{# Expects a BookingType form (src/Form/BookingType.php) #}
+
+{{ form_start(form, {attr: {class: 'booking-form-class'} }) }}
+    <div class="row">
+        <div class="col-md-9">
+            <div class="row">
+                {{ form_widget(form.firstName, {'attr': {'class' : 'col-md-3'}}) }}
+                {{ form_widget(form.email, {'attr': {'class' : 'col-md-3'}}) }}
+                {{ form_widget(form.fromDate, {'attr': {'class' : 'js-datepicker col-md-3'}}) }}
+                {{ form_widget(form.numberOfAdults, {'attr': {'class' : 'col-md-3'}}) }}
+            </div>
+            <div class="row">
+                {{ form_widget(form.lastName, {'attr': {'class' : 'col-md-3'}}) }}
+                {{ form_widget(form.phone, {'attr': {'class' : 'col-md-3'}}) }}
+                {{ form_widget(form.toDate, {'attr': {'class' : 'js-datepicker col-md-3'}}) }}
+                {{ form_widget(form.numberOfKids, {'attr': {'class' : 'col-md-3'}}) }}
+            </div>
+        </div>
+        <input type="submit" class="btn btn-primary col-md-3" value="Reserva" />
+    </div>
+    
+{{ form_end(form) }}
