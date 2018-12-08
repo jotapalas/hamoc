@@ -24,6 +24,33 @@
                 format: 'dd-mm-yyyy'
             }).on('changeDate', function(e){
                 $(this).datepicker('hide');
+                var fromS = $('#booking_fromDate').val().split('-');
+                var toS = $('#booking_toDate').val().split('-');
+                var fromDate = fromS.length === 3 
+                             ? new Date(fromS[2], fromS[1] - 1, fromS[0])
+                             : null;
+                var toDate = toS.length === 3
+                            ? toS && new Date(toS[2], toS[1] - 1, toS[0])
+                            : null;
+
+                var popup = $('.error-popup').first();
+                var datesAreFilled = fromDate !== null && toDate !== null;
+                var invalidDates = toDate <= fromDate;
+                if (datesAreFilled && invalidDates) {
+                    $('.js-datepicker').addClass('has-error');
+                    popup.html('La fecha de salida debe ser posterior a la de entrada');
+                    var ref = $('#booking_toDate');
+                    var refWidth = ref.width();
+                    var popper = new Popper(ref, popup, {
+                        placement: 'bottom'
+                    });
+                    popup.width(refWidth + 20);
+                    popup.removeClass('invisible');
+                } else {
+                    popup.addClass('invisible');
+                    $('.js-datepicker').removeClass('has-error');
+                    popup.html('');
+                }
             });
         });
     </script>
@@ -35,6 +62,7 @@
     </div>
     <div class="container booking-form-container">
         {% include 'forms/booking-form.html.twig' with {'form': form} %}
+        <div class='error-popup invisible'></div>
     </div>
     <div class="background"></div>
     <div class="section-separator"></div>

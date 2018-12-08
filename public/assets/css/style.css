@@ -57,3 +57,18 @@
     float: left;
     padding: 0px 1px 0px 1px;
 }
+
+.has-error {
+    border: 2px solid red;
+}
+
+.error-popup {
+    border: 1px solid black;
+    background-color: rgb(252, 245, 145);
+    font-size: small;
+    padding: 5px;
+}
+
+.invisible {
+    visibility: hidden;
+}

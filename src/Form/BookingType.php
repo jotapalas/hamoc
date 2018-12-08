@@ -60,6 +60,7 @@ class BookingType extends AbstractType
                 ]
             ])
             ->add('numberOfKids', NumberType::class, [
+                'required' => false,
                 'attr' => [
                     'placeholder' => 'Niños (hasta 10 años)'
                 ]

@@ -27,6 +27,9 @@ class IndexController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted()) {
+            if ($booking->getNumberOfKids() === null) {
+                $booking->setNumberOfKids(0);
+            }
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->persist($booking);
             $entityManager->flush();
