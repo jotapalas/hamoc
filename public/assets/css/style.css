@@ -1,0 +1,38 @@
+.logo {
+    font-family: 'Helvetica', sans-serif;
+    font-weight: bold;
+    font-size: larger;
+    color: white;
+}
+
+.header-desktop {
+    background-color:  #007529 ;
+    width: 100%;
+    height: 100px;
+    padding: 40px;
+}
+
+header-desktop::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    filter: blur(10px);
+    opacity: 1;
+    z-index: -1;
+}
+
+.background {
+    background: url("../img/don-alonso-01.jpg") no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.booking-form-container {
+    height: 550px;
+    padding: 200px 100px 150px 100px;
+}

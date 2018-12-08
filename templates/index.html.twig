@@ -30,5 +30,18 @@
 {% endblock %}
 
 {% block body %}
-    {% include 'forms/booking-form.html.twig' with {'form': form} %}
+    <div class="background">
+        <div class="header-desktop">
+            <div class="container header-container">
+                <div class="row">
+                    <div class="col-md-6 logo">
+                        Casa Rural Don Alonso
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container booking-form-container">
+            {% include 'forms/booking-form.html.twig' with {'form': form} %}
+        </div>
+    </div>
 {% endblock %}
