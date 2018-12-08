@@ -1,22 +1,29 @@
 {# Expects a BookingType form (src/Form/BookingType.php) #}
 
 {{ form_start(form, {attr: {class: 'booking-form-class'} }) }}
+    
     <div class="row">
-        <div class="col-md-9">
-            <div class="row">
-                {{ form_widget(form.firstName, {'attr': {'class' : 'col-md-3'}}) }}
-                {{ form_widget(form.email, {'attr': {'class' : 'col-md-3'}}) }}
-                {{ form_widget(form.fromDate, {'attr': {'class' : 'js-datepicker col-md-3'}}) }}
-                {{ form_widget(form.numberOfAdults, {'attr': {'class' : 'col-md-3'}}) }}
+        <div class="col-md-9 booking-form-section">
+            <div class="col-md-3 booking-form-section">
+                {{ form_widget(form.firstName, {'attr': {'class' : 'col-md-12'}}) }}
+                {{ form_widget(form.lastName, {'attr': {'class' : 'col-md-12'}}) }}
             </div>
-            <div class="row">
-                {{ form_widget(form.lastName, {'attr': {'class' : 'col-md-3'}}) }}
-                {{ form_widget(form.phone, {'attr': {'class' : 'col-md-3'}}) }}
-                {{ form_widget(form.toDate, {'attr': {'class' : 'js-datepicker col-md-3'}}) }}
-                {{ form_widget(form.numberOfKids, {'attr': {'class' : 'col-md-3'}}) }}
+            <div class="col-md-3 booking-form-section">
+                {{ form_widget(form.email, {'attr': {'class' : 'col-md-12'}}) }}
+                {{ form_widget(form.phone, {'attr': {'class' : 'col-md-12'}}) }}                
+            </div>
+            <div class="col-md-3 booking-form-section">
+                {{ form_widget(form.fromDate, {'attr': {'class' : 'js-datepicker col-md-12'}}) }}
+                {{ form_widget(form.toDate, {'attr': {'class' : 'js-datepicker col-md-12'}}) }}
+            </div>
+            <div class="col-md-3 booking-form-section">
+                {{ form_widget(form.numberOfAdults, {'attr': {'class' : 'col-md-12'}}) }}
+                {{ form_widget(form.numberOfKids, {'attr': {'class' : 'col-md-12'}}) }}
             </div>
         </div>
-        <input type="submit" class="btn btn-primary col-md-3" value="Reserva" />
+        <div class="col-md-3 booking-form-section">
+            <input type="submit" class="btn btn-success booking-btn col-md-12" value="Reserva" />
+        </div>
     </div>
     
 {{ form_end(form) }}

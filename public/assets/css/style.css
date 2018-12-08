@@ -1,27 +1,16 @@
 .logo {
     font-family: 'Helvetica', sans-serif;
     font-weight: bold;
-    font-size: larger;
+    font-size: 20px;
     color: white;
+    text-transform: uppercase;
 }
 
 .header-desktop {
-    background-color:  #007529 ;
+    background-image: linear-gradient(rgb(0, 41, 4, 1),rgb(0, 41, 4, 0)) ;
     width: 100%;
-    height: 100px;
-    padding: 40px;
-}
-
-header-desktop::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    filter: blur(10px);
-    opacity: 1;
-    z-index: -1;
+    height: 60px;
+    padding: 20px;
 }
 
 .background {
@@ -30,9 +19,41 @@ header-desktop::after {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    height: 550px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+
+    -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    -o-filter: blur(5px);
+    -ms-filter: blur(5px);
+    filter: blur(5px);
+}
+
+.section-separator {
+    position: absolute;
+    top: 546px;
+    z-index: 2;
+    width: 100%;
+    border-bottom: 4px solid rgb(0, 41, 4);
+    margin-bottom: 20px;
 }
 
 .booking-form-container {
-    height: 550px;
-    padding: 200px 100px 150px 100px;
+    height: 490px;
+    padding: 150px 100px 150px 100px;
+}
+
+.booking-btn {
+    text-transform: uppercase;
+    font-weight: bold;
+    height: 100%;
+}
+
+.booking-form-section {
+    float: left;
+    padding: 0px 1px 0px 1px;
 }
