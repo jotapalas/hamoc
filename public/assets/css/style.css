@@ -14,7 +14,7 @@
 }
 
 .background {
-    background: url("../img/don-alonso-01.jpg") no-repeat center center fixed; 
+    background: url("../img/don-alonso-01.jpg") no-repeat center center; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -25,12 +25,6 @@
     top: 0;
     left: 0;
     z-index: -1;
-
-    -webkit-filter: blur(5px);
-    -moz-filter: blur(5px);
-    -o-filter: blur(5px);
-    -ms-filter: blur(5px);
-    filter: blur(5px);
 }
 
 .section-separator {
@@ -58,6 +52,13 @@
     padding: 0px 1px 0px 1px;
 }
 
+.booking-form {
+    background-color: black;
+    height: 87px;
+    width: 100%;
+    padding: 5px;
+}
+
 .has-error {
     border: 2px solid red;
 }
@@ -72,3 +73,36 @@
 .invisible {
     visibility: hidden;
 }
+
+
+.house-section {
+    margin-top: 20px;
+}
+
+.house-section > h1 {
+    font-family: 'Helvetica', sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 10px;
+}
+
+.img-small > img {
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.img-medium > img {
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.img-container {
+    margin-bottom: 10px;
+}
+
+.house-info {
+    margin: 20px;
+}
+

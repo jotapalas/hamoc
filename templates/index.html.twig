@@ -9,6 +9,10 @@
         rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/css/bootstrap-datepicker.min.css"
     />
+    <link
+        rel="stylesheet"
+        href="{{ asset('/assets/css/slide.css') }}"
+    />
 {% endblock %}
 
 {% block scripts %}
@@ -60,13 +64,72 @@
     <div class="header-desktop">
         {% include 'common/header.html.twig' %}
     </div>
+    <div class="background"></div>
     <div class="container booking-form-container">
         {% include 'forms/booking-form.html.twig' with {'form': form} %}
         <div class='error-popup invisible'></div>
     </div>
-    <div class="background"></div>
     <div class="section-separator"></div>
-    
-    <div class="content">
+    <div class="house-section container" id="about">
+        <h1>Sobre la casa</h1>
+        <div class="img-container row">
+            <div class="img-small col-md-4">
+                <img src="{{ asset('/assets/img/da01.jpg') }}" alt="" />
+            </div>
+            <div class="img-small col-md-4">
+                <img src="{{ asset('/assets/img/da02.jpg') }}" alt="" />
+            </div>
+            <div class="img-small col-md-4">
+                <img src="{{ asset('/assets/img/da03.jpg') }}" alt="" />
+            </div>
+        </div>
+        <div class="house-info row">
+            <div class="col-md-12 text-center">
+                Una casa espectacular, con <strong>382 m2 construidos</strong> divididos en varios espacios y ambientes.
+            </div>
+        </div>
+    </div>
+
+    <div class="house-section container" id="salon">
+        <div class="row">
+            <div class="img-medium col-md-6">
+                <img src="{{ asset('/assets/img/da04.jpg') }}" alt="" />
+            </div>
+            <div class="img-medium col-md-6">
+                <img src="{{ asset('/assets/img/da05.jpg') }}" alt="" />
+            </div>
+        </div>
+    </div>
+
+    <div class="house-section container" id="bedrooms">
+        <h1>Dormitorios y ocupación</h1>
+        <div class="img-container row">
+            <div class="img-small col-md-4">
+                <img src="{{ asset('/assets/img/casa-rural-don-alonso-dormitorio-01.jpg') }}" alt="" />
+            </div>
+            <div class="img-small col-md-4">
+                <img src="{{ asset('/assets/img/casa-rural-don-alonso-dormitorio-02.jpg') }}" alt="" />
+            </div>
+            <div class="img-small col-md-4">
+                <img src="{{ asset('/assets/img/casa-rural-don-alonso-dormitorio-03.jpg') }}" alt="" />
+            </div>
+        </div>
+        <div class="house-info row">
+            <div class="col-md-12 text-center">
+                Seis dormitorios, dobles y triples, con camas de 135, 150 y 190 cm, donde pueden hospedarse hasta <strong>16 personas.</strong><br/>
+                La planta de arriba cuenta también con <strong>tres baños completísimos,</strong> además de una agradable zona de lectura o de juegos de mesa.
+            </div>
+        </div>
+        <div class="img-container row">
+            <div class="img-small col-md-4">
+                <img src="{{ asset('/assets/img/casa-rural-don-alonso-aseo-planta-alta.jpg') }}" alt="" />
+            </div>
+            <div class="img-small col-md-4">
+                <img src="{{ asset('/assets/img/casa-rural-don-alonso-zona-lectura-planta-alta.jpg') }}" alt="" />
+            </div>
+            <div class="img-small col-md-4">
+                <img src="{{ asset('/assets/img/casa-rural-don-alonso-planta-alta.jpg') }}" alt="" />
+            </div>
+        </div>
     </div>
 {% endblock %}
