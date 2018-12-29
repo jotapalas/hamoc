@@ -1,7 +1,13 @@
 {# Expects a BookingType form (src/Form/BookingType.php) #}
 
 {{ form_start(form, {attr: {class: 'booking-form-class'} }) }}
-    
+
+    <div class="row slogan-container">
+        <div class="col-md-12 slogan text-center">
+            Una <strong>espléndida casa</strong> con capacidad para <strong>16 personas.</strong>
+        </div>
+    </div>
+
     <div class="row booking-form">
         <div class="col-md-9 booking-form-section">
             <div class="col-md-3 booking-form-section">
@@ -25,5 +31,5 @@
             <input type="submit" class="btn btn-success booking-btn col-md-12" value="Reserva" />
         </div>
     </div>
-    
+
 {{ form_end(form) }}
