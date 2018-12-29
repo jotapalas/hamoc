@@ -1,6 +1,6 @@
 {% extends "base.html.twig" %}
 {% block title %}
-    Casa de Don Alonso
+    Casa Rural Don Alonso
 {% endblock %}
 
 {% block styles %}
@@ -61,7 +61,7 @@
 {% endblock %}
 
 {% block body %}
-    <div class="header-desktop" id="top">
+    <div class="header-desktop">
         {% include 'common/header.html.twig' %}
     </div>
     <div class="background"></div>
@@ -70,108 +70,114 @@
         <div class='error-popup invisible'></div>
     </div>
     <div class="section-separator"></div>
-    <div class="house-section container" id="about">
-        <h1>Sobre la casa</h1>
-        <div class="img-container row">
-            <div class="img-small col-md-4">
-                <img src="{{ asset('/assets/img/da01.jpg') }}" alt="" />
+    <div class="house-info-container container">
+        <div class="house-section container">
+            <a name="about" class="anchor"></a>
+            <h1>Sobre la casa</h1>
+            <div class="img-container row">
+                <div class="img-small col-md-4">
+                    <img src="{{ asset('/assets/img/da01.jpg') }}" alt="" />
+                </div>
+                <div class="img-small col-md-4">
+                    <img src="{{ asset('/assets/img/da02.jpg') }}" alt="" />
+                </div>
+                <div class="img-small col-md-4">
+                    <img src="{{ asset('/assets/img/da03.jpg') }}" alt="" />
+                </div>
             </div>
-            <div class="img-small col-md-4">
-                <img src="{{ asset('/assets/img/da02.jpg') }}" alt="" />
-            </div>
-            <div class="img-small col-md-4">
-                <img src="{{ asset('/assets/img/da03.jpg') }}" alt="" />
+            <div class="house-info row">
+                <div class="col-md-12 text-center">
+                    Una casa espectacular, con <strong>382 m<sup>2</sup> construidos</strong> divididos en varios espacios y ambientes.
+                </div>
             </div>
         </div>
-        <div class="house-info row">
-            <div class="col-md-12 text-center">
-                Una casa espectacular, con <strong>382 m<sup>2</sup> construidos</strong> divididos en varios espacios y ambientes.
-            </div>
-        </div>
-    </div>
 
-    <div class="house-section container" id="salon">
-        <div class="row">
-            <div class="img-medium col-md-6">
-                <img src="{{ asset('/assets/img/da04.jpg') }}" alt="" />
-            </div>
-            <div class="img-medium col-md-6">
-                <img src="{{ asset('/assets/img/da05.jpg') }}" alt="" />
+        <div class="house-section container" id="salon">
+            <div class="row">
+                <div class="img-medium col-md-6">
+                    <img src="{{ asset('/assets/img/da04.jpg') }}" alt="" />
+                </div>
+                <div class="img-medium col-md-6">
+                    <img src="{{ asset('/assets/img/da05.jpg') }}" alt="" />
+                </div>
             </div>
         </div>
-    </div>
 
-    <div class="house-section container" id="bedrooms">
-        <h1>Dormitorios y ocupación</h1>
-        <div class="img-container row">
-            <div class="img-small col-md-4">
-                <img src="{{ asset('/assets/img/casa-rural-don-alonso-dormitorio-01.jpg') }}" alt="" />
+        <div class="house-section container">
+        <a name="bedrooms" class="anchor"></a>
+            <h1>Dormitorios y ocupación</h1>
+            <div class="img-container row">
+                <div class="img-small col-md-4">
+                    <img src="{{ asset('/assets/img/casa-rural-don-alonso-dormitorio-01.jpg') }}" alt="" />
+                </div>
+                <div class="img-small col-md-4">
+                    <img src="{{ asset('/assets/img/casa-rural-don-alonso-dormitorio-02.jpg') }}" alt="" />
+                </div>
+                <div class="img-small col-md-4">
+                    <img src="{{ asset('/assets/img/casa-rural-don-alonso-dormitorio-03.jpg') }}" alt="" />
+                </div>
             </div>
-            <div class="img-small col-md-4">
-                <img src="{{ asset('/assets/img/casa-rural-don-alonso-dormitorio-02.jpg') }}" alt="" />
+            <div class="house-info row">
+                <div class="col-md-12 text-center">
+                    Seis dormitorios, dobles y triples, con camas de 135, 150 y 190 cm, donde pueden hospedarse hasta <strong>16 personas.</strong><br/>
+                    La planta de arriba cuenta también con <strong>tres baños completísimos,</strong> además de una agradable zona de lectura o de juegos de mesa.
+                </div>
             </div>
-            <div class="img-small col-md-4">
-                <img src="{{ asset('/assets/img/casa-rural-don-alonso-dormitorio-03.jpg') }}" alt="" />
+            <div class="img-container row">
+                <div class="img-small col-md-4">
+                    <img src="{{ asset('/assets/img/casa-rural-don-alonso-aseo-planta-alta.jpg') }}" alt="" />
+                </div>
+                <div class="img-small col-md-4">
+                    <img src="{{ asset('/assets/img/casa-rural-don-alonso-zona-lectura-planta-alta.jpg') }}" alt="" />
+                </div>
+                <div class="img-small col-md-4">
+                    <img src="{{ asset('/assets/img/casa-rural-don-alonso-planta-alta.jpg') }}" alt="" />
+                </div>
             </div>
         </div>
-        <div class="house-info row">
-            <div class="col-md-12 text-center">
-                Seis dormitorios, dobles y triples, con camas de 135, 150 y 190 cm, donde pueden hospedarse hasta <strong>16 personas.</strong><br/>
-                La planta de arriba cuenta también con <strong>tres baños completísimos,</strong> además de una agradable zona de lectura o de juegos de mesa.
-            </div>
-        </div>
-        <div class="img-container row">
-            <div class="img-small col-md-4">
-                <img src="{{ asset('/assets/img/casa-rural-don-alonso-aseo-planta-alta.jpg') }}" alt="" />
-            </div>
-            <div class="img-small col-md-4">
-                <img src="{{ asset('/assets/img/casa-rural-don-alonso-zona-lectura-planta-alta.jpg') }}" alt="" />
-            </div>
-            <div class="img-small col-md-4">
-                <img src="{{ asset('/assets/img/casa-rural-don-alonso-planta-alta.jpg') }}" alt="" />
-            </div>
-        </div>
-    </div>
 
-    <div class="house-section container" id="activities">
-        <h1>Actividades cercanas</h1>
-        <div class="row">
-            <div class="img-small col-md-4">
-                <img src="{{ asset('/assets/img/castillo-de-coca.jpg') }}" alt="" />
+        <div class="house-section container">
+            <a name="activities" class="anchor"></a>
+            <h1>Actividades cercanas</h1>
+            <div class="row">
+                <div class="img-small col-md-4">
+                    <img src="{{ asset('/assets/img/castillo-de-coca.jpg') }}" alt="" />
+                </div>
+                <div class="img-small col-md-4">
+                    <img src="{{ asset('/assets/img/casa-rural-don-alonso-cochinillo.jpg') }}" alt="" />
+                </div>
+                <div class="img-small col-md-4">
+                    <img src="{{ asset('/assets/img/castillo-2.jpg') }}" alt="" />
+                </div>
             </div>
-            <div class="img-small col-md-4">
-                <img src="{{ asset('/assets/img/casa-rural-don-alonso-cochinillo.jpg') }}" alt="" />
-            </div>
-            <div class="img-small col-md-4">
-                <img src="{{ asset('/assets/img/castillo-2.jpg') }}" alt="" />
-            </div>
-        </div>
-        <div class="house-info row">
-            <div class="col-md-12 text-center">
-                Disfruten de las múltiples actividades cercanas pero, sobre todo, no olviden <strong>disfrutar de la compañía</strong>.<br/>
-                Se puede encargar asado de cordero y cochinillo.
-            </div>
-        </div>
-    </div>
-    <div class="house-section container" id="location">
-        <h1>Ubicación</h1>
-        <div class="row">
-            <div class="col-md-12 text-center">
-                <!-- GOOGLE MAPS AUTOGENERATED IFRAME -->
-                <iframe 
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3003.8838509127404!2d-4.572212149588855!3d41.15888571799165!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd40cd7b1eff639f%3A0x8ada3e28addb944e!2sCasa+Rural+Don+Alonso!5e0!3m2!1ses!2ses!4v1546086799838"
-                    width="80%"
-                    height="450"
-                    frameborder="0"
-                    allowfullscreen
-                >
-                </iframe>
+            <div class="house-info row">
+                <div class="col-md-12 text-center">
+                    Disfruten de las múltiples actividades cercanas pero, sobre todo, no olviden <strong>disfrutar de la compañía</strong>.<br/>
+                    Se puede encargar asado de cordero y cochinillo.
+                </div>
             </div>
         </div>
-        <div class="house-info row">
-            <div class="col-md-12 text-center">
-                Estamos en Calle Reoyo, 11.<br/>
-                40460, Santiuste de San Juan Bautista, <strong>Segovia</strong><br/>
+        <div class="house-section container">
+            <a name="location" class="anchor"></a>
+            <h1>Ubicación</h1>
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <!-- GOOGLE MAPS AUTOGENERATED IFRAME -->
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3003.8838509127404!2d-4.572212149588855!3d41.15888571799165!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd40cd7b1eff639f%3A0x8ada3e28addb944e!2sCasa+Rural+Don+Alonso!5e0!3m2!1ses!2ses!4v1546086799838"
+                        width="80%"
+                        height="450"
+                        frameborder="0"
+                        allowfullscreen
+                    >
+                    </iframe>
+                </div>
+            </div>
+            <div class="house-info row">
+                <div class="col-md-12 text-center">
+                    Estamos en Calle Reoyo, 11.<br/>
+                    40460, Santiuste de San Juan Bautista, <strong>Segovia</strong><br/>
+                </div>
             </div>
         </div>
     </div>

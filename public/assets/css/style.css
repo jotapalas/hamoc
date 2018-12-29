@@ -11,6 +11,10 @@
     background-color: rgb(0, 41, 4) ;
     width: 100%;
     height: 50px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
 }
 
 .background {
@@ -22,23 +26,28 @@
     height: 550px;
     width: 100%;
     position: absolute;
-    top: 0;
+    top: 40;
     left: 0;
     z-index: -1;
 }
 
 .section-separator {
     position: absolute;
-    top: 546px;
+    top: 550px;
     z-index: 2;
     width: 100%;
     border-bottom: 4px solid rgb(0, 41, 4);
     margin-bottom: 20px;
 }
 
+.house-info-container {
+    position: relative;
+    top: 80px;
+}
+
 .booking-form-container {
     height: 490px;
-    padding: 150px 100px 150px 100px;
+    padding: 250px 100px 150px 100px;
 }
 
 .booking-btn {
@@ -77,6 +86,7 @@
 
 .house-section {
     margin-top: 20px;
+    position: relative;
 }
 
 .house-section > h1 {
@@ -130,4 +140,11 @@
 .menu-item:hover {
     background-color: #116519;
     cursor: pointer;
+}
+
+a.anchor {
+    display: block;
+    position: relative;
+    top: -60px;
+    visibility: hidden;
 }
