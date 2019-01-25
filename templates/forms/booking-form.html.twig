@@ -1,6 +1,6 @@
 {# Expects a BookingType form (src/Form/BookingType.php) #}
 
-{{ form_start(form, {attr: {class: 'booking-form-class'} }) }}
+{{ form_start(form, {attr: {class: 'booking-form-class', action: path('booking_save')} }) }}
 
     <div class="row slogan-container">
         <div class="col-md-12 slogan text-center">

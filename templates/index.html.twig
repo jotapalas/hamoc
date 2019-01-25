@@ -64,6 +64,18 @@
     <div class="header-desktop">
         {% include 'common/header.html.twig' %}
     </div>
+
+    {% if saved == true %}
+        <script>
+            Swal.fire({
+                title: 'Solicitud de reserva realizada',
+                text: 'Hemos recibido su solicitud. En breve nos pondremos en contacto con usted para completar el proceso de reserva.',
+                type: 'success',
+                confirmButtonText: '¡De acuerdo!'
+            });
+        </script>
+    {% endif %}
+
     <div class="background"></div>
     <div class="container booking-form-container">
         {% include 'forms/booking-form.html.twig' with {'form': form} %}
@@ -82,5 +94,8 @@
         
         <a name="location" class="anchor"></a>
         {% include 'index-sections/location.html.twig' %}
+    </div>
+    <div class="footer-desktop">
+        {% include 'common/footer.html.twig' %}
     </div>
 {% endblock %}

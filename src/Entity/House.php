@@ -76,9 +76,4 @@ class House
 
         return $this;
     }
-
-    public function getBookings(): Collection
-    {
-        return $this->bookings;
-    }
 }
