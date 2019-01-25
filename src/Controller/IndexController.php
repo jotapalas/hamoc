@@ -22,6 +22,7 @@ class IndexController extends AbstractController
         if ($bookingSaved === true) {
             $bookingRepository = $this->getDoctrine()->getRepository(Booking::class);
             $booking = $bookingRepository->find($bookingId);
+            $bookingSaved = $booking !== null;
         }
 
         $form = $this->createForm(BookingType::class, $booking);
