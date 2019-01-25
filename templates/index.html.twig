@@ -71,7 +71,9 @@
                 title: 'Solicitud de reserva realizada',
                 text: 'Hemos recibido su solicitud. En breve nos pondremos en contacto con usted para completar el proceso de reserva.',
                 type: 'success',
-                confirmButtonText: '¡De acuerdo!'
+                confirmButtonText: '¡De acuerdo!'   
+            }).then(() => {
+                window.location = "{{ path('index') }}";
             });
         </script>
     {% endif %}
